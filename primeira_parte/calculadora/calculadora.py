@@ -6,19 +6,19 @@ Autora: Juliette de Paula Felipe de Oliveira
 
 """
 # a cada 100 pessoas que visualizam o anúncio 12 clicam nele.
-multiplicadorCliques = 12/100;
+MULTIPLICADOR_CLIQUES = 12/100;
 
 # a cada 20 pessoas que clicam no anúncio 3 compartilham nas redes sociais.
-multiplicadorCompartilhamentos = 3/20;
+MULTIPLICADOR_COMPARTILHAMENTOS = 3/20;
 
 # cada compartilhamento nas redes sociais gera 40 novas visualizações.
-multiplicadorVisualizacoesPorCompartilhamento = 40;
+VISUALIZACOES_POR_COMPARTILHAMENTO = 40;
 
 # 30 pessoas visualizam o anúncio original (não compartilhado) a cada R$ 1,00 investido.
-multiplicadorVisualizacoesPorReal = 30;
+VISUALIZACOES_POR_REAL = 30;
 
 # o mesmo anúncio é compartilhado no máximo 4 vezes em sequência
-maxCompartilhamentoEmSequencia = 4;
+MAX_COMPARTILHAMENTO_SEQUENCIA = 4;
 
 def cliquesPorVisualizacoes(numeroDeVisualizações):
     """
@@ -28,7 +28,7 @@ def cliquesPorVisualizacoes(numeroDeVisualizações):
     :param numeroDeVisualizações: float
     :return: float
     """
-    return numeroDeVisualizações*multiplicadorCliques;
+    return numeroDeVisualizações*MULTIPLICADOR_CLIQUES;
 
 def compartilhamentosPorCliques(numeroDeCliques):
     """
@@ -38,7 +38,7 @@ def compartilhamentosPorCliques(numeroDeCliques):
     :param numeroDeCliques: float
     :return: float
     """
-    return numeroDeCliques*multiplicadorCompartilhamentos;
+    return numeroDeCliques*MULTIPLICADOR_COMPARTILHAMENTOS;
 
 def visualizacoesPorCompartilhamento(numeroDeCompartilhamentos):
     """
@@ -48,7 +48,7 @@ def visualizacoesPorCompartilhamento(numeroDeCompartilhamentos):
     :param numeroDeCompartilhamentos: float
     :return: float
     """
-    return numeroDeCompartilhamentos*multiplicadorVisualizacoesPorCompartilhamento;
+    return numeroDeCompartilhamentos*VISUALIZACOES_POR_COMPARTILHAMENTO;
 
 def visualizacoesAnuncioOriginalPorReal(valorInvestido):
     """
@@ -58,7 +58,7 @@ def visualizacoesAnuncioOriginalPorReal(valorInvestido):
     :param valorInvestido: float
     :return: float
     """
-    return valorInvestido*multiplicadorVisualizacoesPorReal;
+    return valorInvestido*VISUALIZACOES_POR_REAL;
 
 def calculoAproximadoDeVisualizacoes(valorInvestido):
     """
@@ -71,7 +71,7 @@ def calculoAproximadoDeVisualizacoes(valorInvestido):
     visualizacoesPorInvestimento = visualizacoesAnuncioOriginalPorReal(valorInvestido);
     valorAproximadoDeVisualizacoes = visualizacoesPorInvestimento;
 
-    for i in range(maxCompartilhamentoEmSequencia):
+    for i in range(MAX_COMPARTILHAMENTO_SEQUENCIA):
         quantidadeDeCliques = cliquesPorVisualizacoes(visualizacoesPorInvestimento);
         quantidadeDeCompartilhamentos = compartilhamentosPorCliques(quantidadeDeCliques);
         valorAproximadoDeVisualizacoes += visualizacoesPorCompartilhamento(quantidadeDeCompartilhamentos);
