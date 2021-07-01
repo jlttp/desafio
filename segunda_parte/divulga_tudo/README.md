@@ -52,7 +52,9 @@ Os relatórios poderão ser filtrados por intervalo de tempo e cliente.
 
 1. Faça o clone do repositório
 2. Usando terminal, navegue até a raiz do projeto (pasta "divulga_tudo") e digite:
-> python manage.py runserver
+```
+python manage.py runserver
+```
 3. Após iniciar, a aplicação estará disponível no endereço http://localhost:8000/
 
 Na aplicação desenvolvida é possível:
