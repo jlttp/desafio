@@ -8,8 +8,8 @@ A agência Divulga Tudo precisa de um programa para gerenciar os seus anúncios 
 
 Este programa será composto de duas partes:
 
-1ª Parte – Uma calculadora de alcance de anúncio online.
-2ª Parte - Um sistema de cadastro de anúncios.
+* 1ª Parte – Uma calculadora de alcance de anúncio online.
+* 2ª Parte - Um sistema de cadastro de anúncios.
 
 1ª Parte - Considere os seguintes critérios fictícios para desenvolver a calculadora de alcance de anúncio:
 
