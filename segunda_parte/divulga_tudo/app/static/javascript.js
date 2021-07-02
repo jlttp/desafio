@@ -17,7 +17,7 @@
 
     //Ajax do form
     if(doc.querySelector('#form')){
-        let form=doc.querySelector('#form');
+        let form=doc.querySelector('#form');     
         function sendForm(event){
             event.preventDefault();
             let data = new FormData(form);
@@ -34,7 +34,9 @@
                 }
             }
             ajax.send(data);
-            form.reset();
+            if(form.attributes.action.value.includes("create")){
+                form.reset();
+            }
         }
         form.addEventListener('submit', sendForm, false);
     }
