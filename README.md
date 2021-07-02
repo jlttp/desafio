@@ -71,7 +71,7 @@ Na aplicação desenvolvida é possível:
 * Deletar um anúncio
 
 
-## Tecnologias usandos 
+## Tecnologias usadas 
 
 * Python
 * Django
